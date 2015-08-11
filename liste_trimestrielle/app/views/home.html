@@ -1,0 +1,21 @@
+<h2> LISTE DEROULANTE TRIMESTRIELLE: </h2>
+</br>
+<div class="optionsMenu">
+    <form name="visibilityForm">
+        <label for="nbreAnnee">visibilit&eacute;&nbsp;:
+            <input type="text" id="nbreAnnee" name="setVisibility" class="form-control fieldVisibility" placeholder="10" ng-model="visibility" ng-pattern="/^[0-9][0-9]*$/" ng-change="fillOptions()"/>
+            &nbsp;ans
+        </label>
+    </form>
+    <datepicker date-format="d/M/y" class="fieldDate">
+        <input type="text" class="form-control" ng-model="date" ng-change="fillOptions()"/>
+    </datepicker>
+</div>
+<span ng-if="visibilityForm.setVisibility.$dirty && visibilityForm.setVisibility.$error.pattern" class="errorMessage">
+    la visibilit&eacute; doit &ecirc;tre une valeur enti&egrave;re et positive.
+</span>
+<select class="form-control fieldSelect">
+    <option ng-repeat="option in options">
+        {{option.year}} {{option.quarter[0]}}, {{option.quarter[1]}}, {{option.quarter[2]}}
+    </option>
+</select>

@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #000000;
+    color: #dddddd;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.wrapper{
+    height: 100%;
+    text-align: center;
+}
+
+.fieldSelect{
+    width: 30%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fieldVisibility{
+    width: 70px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.fieldDate{
+    width: 150px;
+    margin-top: 30px;
+}
+
+.optionsMenu{
+    width: 30%;
+    margin: auto;
+}
+
+form{
+    display: inline-block;
+}
+
+/******************affichage erreur*********************/
+
+.optionsMenu input.ng-dirty.ng-invalid-pattern {
+    border: 2px solid red;
+}
+
+.errorMessage{
+    color: red;
+}
+
